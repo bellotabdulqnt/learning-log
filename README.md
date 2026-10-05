@@ -1,2 +1,2 @@
 # learning-log
-Weekly python self-learning exercises and notes.
+Weekly self-learning exercises and notes.

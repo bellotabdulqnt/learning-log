@@ -1,5 +1,14 @@
-words = input("Input: ")
-for i in words:
-    if i == "a" or i == "e" or i == "i" or i == "o" or i == "u":
-        words = words.replace(i, "")
-print(f"Output: {words}")
+def main():
+    words = shorten(input("Input: "))
+    print(f"Output: {words}")
+
+
+def shorten(word):
+    for i in word:
+        if i in list("aeiouAEIOU"):
+            word = word.replace(i, "")
+    return word
+
+
+if __name__ == "__main__":
+    main()

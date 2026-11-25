@@ -1,0 +1,15 @@
+from fpdf import FPDF
+
+shirtname = input("Name: ")
+pdf = FPDF()
+pdf.set_auto_page_break(auto=False, margin=0)
+pdf.add_page()
+pdf.image("shirtificate.png", x=10, y=70, w=190)
+pdf.set_font("helvetica", style="B", size=40)
+pdf.set_y(20)
+pdf.cell(0, 20, text="CS50 Shirtificate", align="C", center=True)
+pdf.set_font("helvetica", style="B", size=20)
+pdf.set_y(140)
+pdf.set_text_color(255, 255, 255)
+pdf.cell(0, 20, text=f"{shirtname} took CS50", align="C", center=True)
+pdf.output("shirtificate.pdf")
